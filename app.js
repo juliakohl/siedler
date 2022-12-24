@@ -1,8 +1,10 @@
 const app = require("express")();
 const PORT = process.env.PORT || 3000;
+server = express.createServer();
 
-app.get("", (req,res) => {
-	res.sendFile('index.html');
+server.use('/assets', express.static(__dirname + '/assets') );
+server.get("/", (req,res) => {
+	res.sendfile('index.html');
 });
 
 app.listen(PORT, () => {
