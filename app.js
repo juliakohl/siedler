@@ -1,4 +1,4 @@
-const app = require("express")();
+const app = require("express");
 const PORT = process.env.PORT || 3000;
 server = express.createServer();
 
@@ -7,6 +7,6 @@ server.get("/", (req,res) => {
 	res.sendfile('index.html');
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
 	console.log(`App up at port ${PORT}`);
 });
